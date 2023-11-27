@@ -1,0 +1,79 @@
+@font-face {
+    font-family: "Poppins";
+    src: url("fonts/Poppins-Regular.ttf");
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url("fonts/Poppins-Bold.ttf");
+    font-weight: 800;
+}
+
+
+html , body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Poppins-Bold!important;
+    background: hsl(0, 0%, 94%);
+}
+
+#container {
+    width: 95%;
+    height: 600px;
+    background: white;
+    border-radius: 30px 30px 200px;
+    box-shadow: 22px 21px 39px -3px hsla(223, 4%, 68%, 0.007);
+}
+
+label {
+    font-size: 18px;
+    color: hsl(0, 1%, 38%);
+    letter-spacing: 5px;
+}
+
+span{
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+    position: relative;
+    left: 75px;
+}
+
+.button {
+    width: 120px!important;
+    height: 120px;
+    border-radius: 90px;
+    color: white;
+    background:  hsl(259, 100%, 65%);
+    border: 1px;
+    position: relative;
+    top:-58px;
+    left: 0px;
+}
+
+.button:hover{
+    background: black;
+}
+
+
+form input {
+    width: 80%!important;
+    height: 68px;
+    font-size: 32px!important;
+    text-indent: 25px !important;
+    color: black;
+    border: 2px solid hsl(0, 0%, 86%)!important;
+    border-radius: 10px;
+}
+
+.form-control:focus {
+    border-color: hsl(259, 100%, 65%)!important;
+    box-shadow: 0 0 0px 0px hsl(259, 100%, 65%), 0 0 0px hsl(259, 100%, 65%);
+  }
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+    color: hsl(228, 45%, 44%);
+}
+

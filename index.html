@@ -3,31 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Age calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="/assets/script.js"></script>
+  <title>Age calculator app</title>
 </head>
 <body>
+  <div class="container d-flex align-items-center justify-content-center min-vh-100">
+    <div class="row align-content-start" id="container">
+      <div class="row h-25 mx-5 mt-5" id="calc">
+        <div class="row">
+          <form action="" class="row justify-content-start mx-1">
+            <div class="col-sm-3">
+              <label class="my-2" for="day">DAY</label>
+              <input class="form-control p-0" type="text" id="day" placeholder="DD" required>
+            </div>
+            <div class="col-sm-3">
+              <label class="my-2" for="month">MONTH</label>
+              <input class="form-control p-0" type="text" id="month" placeholder="MM" required>
+            </div>
+            <div class="col-sm-3">
+              <label class="my-2" for="year">YEAR</label>
+              <input class="form-control p-0" type="text" id="year" placeholder="YYYY" required>
+            </div>
+          </form>
+        </div>
+        <!--  -->
+      </div>
+      <div class="row d-inline-flex">
+        <div class="col-lg-10">
+          <span class=""></span>
+        </div>
+        <div class="col-1">
+          <button class="button" type="submit"><img src="assets/images/icon-arrow.svg" alt=""></button>
+        </div>
+      </div>
+      <div class="row" id="result">
 
-  Day
-  DD
+      </div>
+    </div>
+  </div>
 
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
