@@ -1,79 +1,244 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 @font-face {
-    font-family: "Poppins";
+    font-family: 'Poppins-Regular';
     src: url("fonts/Poppins-Regular.ttf");
-    font-weight: 800;
 }
 
 @font-face {
-    font-family: "Poppins-Bold";
-    src: url("fonts/Poppins-Bold.ttf");
-    font-weight: 800;
+    font-family: 'Poppins-ExtraBold';
+    src: url("fonts/Poppins-ExtraBoldItalic.ttf");
 }
 
+html {
+    font-family: 'Poppins-Regular',sans-serif;
+}
 
-html , body {
-    margin: 0;
+body{
+    background-color: #f0f0f0;
     min-height: 100vh;
-    font-family: Poppins-Bold!important;
-    background: hsl(0, 0%, 94%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 32px;
 }
 
-#container {
-    width: 95%;
-    height: 600px;
-    background: white;
-    border-radius: 30px 30px 200px;
-    box-shadow: 22px 21px 39px -3px hsla(223, 4%, 68%, 0.007);
+.attribution {
+    position: fixed;
+    bottom: 10px;
+    font-size: 1rem;
+}
+
+.panel {
+    background-color: white;
+    width: 100%;
+    max-width: 30em;
+    border: 1px solid rgb(236, 236, 236);
+    border-radius: 2rem 2rem 10rem 2rem;
+}
+
+.calculator {
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 2em;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 32px;
+    box-sizing: border-box;
+}
+
+.inputs{
+    display: flex;
+    width: 100%;
+    flex-shrink: 1;
+}
+
+.input {
+    width: 10rem;
+    min-width: 1rem;
+    margin-right: 40px;
 }
 
 label {
-    font-size: 18px;
-    color: hsl(0, 1%, 38%);
-    letter-spacing: 5px;
-}
-
-span{
     display: block;
+    letter-spacing: 3px;
+    color: hsl(0, 1%, 44%);
+    margin: 0.7em 0;
+    font-weight: 600;
+    font-size: 0.5em
+}
+
+.calc-input {
+    font-weight: 800;
     width: 100%;
-    border: 1px solid #ccc;
-    position: relative;
-    left: 75px;
-}
-
-.button {
-    width: 120px!important;
-    height: 120px;
-    border-radius: 90px;
-    color: white;
-    background:  hsl(259, 100%, 65%);
-    border: 1px;
-    position: relative;
-    top:-58px;
-    left: 0px;
-}
-
-.button:hover{
-    background: black;
-}
-
-
-form input {
-    width: 80%!important;
-    height: 68px;
-    font-size: 32px!important;
-    text-indent: 25px !important;
-    color: black;
-    border: 2px solid hsl(0, 0%, 86%)!important;
+    height: 4rem;
+    border: 2px solid lightgray;
     border-radius: 10px;
+    font-size: 1em;
+    text-indent: 0.7em;
+ }
+
+ .calc-input:focus{ 
+    outline: none;
+    border-color: hsl(259, 100%, 65%);
+ }
+ 
+.calc-btn{
+    display: flex;
+    justify-content: flex-end;
 }
 
-.form-control:focus {
-    border-color: hsl(259, 100%, 65%)!important;
-    box-shadow: 0 0 0px 0px hsl(259, 100%, 65%), 0 0 0px hsl(259, 100%, 65%);
-  }
-
-.attribution { 
-    font-size: 11px; text-align: center; 
-    color: hsl(228, 45%, 44%);
+.inputs, .calc-btn{
+    padding-bottom: 1.5em;
+    border-bottom: 2px solid lightgray;
 }
 
+button {
+    border-radius: 50%;
+    padding: 2em;
+    border: 0;
+    background-color: hsl(259, 100%, 65%);
+    position: relative;
+    top: calc(50% + 3rem);
+}
+
+button:hover{
+    background-color: black;
+    cursor: pointer;
+}
+img {
+    width: 4rem;
+}
+
+/*------------------------------------*/
+
+.output {
+    border: 0;
+    font-family: 'Poppins-ExtraBold';
+    color: hsl(259, 100%, 65%);
+    font-size: 1em;
+
+}
+
+.output-panel {
+    padding-bottom: 2em;
+}
+
+p {
+    font-family: 'Poppins-ExtraBold';
+    padding: 0 0.6em;
+    font-size: 6rem;
+    display: flex;
+    align-items: center;
+}
+
+/* ------------------------------------ */
+
+@media (max-width: 360px){
+    .body{
+        font-size: 16px;
+    }
+    
+    .panel {
+        width: 90%;
+        border-radius: 2rem 2rem 6rem 2rem;
+    }
+    
+    .calculator{
+        padding: 2.5rem 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-bottom: 0;
+    }
+
+    .inputs {
+        width: 100%;
+        padding-bottom: 3.5rem;
+        justify-content: space-evenly;
+    }
+
+    .calc-btn {
+        border: none;
+        padding-bottom: 0;
+    }
+
+    button{
+        height: fit-content;
+        padding: 1rem;
+        top: -50%;
+    }
+    img{
+        width:1.5rem;
+        height: 1.5rem;
+    }
+
+    .input {
+        margin-right: 1em;
+        font-size: 1.2rem;
+    }
+
+    .calc-input{
+        width: 5rem;
+        height: 3rem;
+    }
+
+    .input:last-child {
+        margin-right: 0;
+    }
+
+    p {
+        font-size: 1.5em;
+    }
+
+    .output-panel{
+        padding-bottom: 3rem;
+    }
+}
