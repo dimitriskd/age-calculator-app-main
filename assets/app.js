@@ -18,13 +18,9 @@ $(document).ready(function () {
     const birthDate = new Date(year, month, day);
 
     if (isValidDay && isValidMonth && isValidYear) {
-      console.log("Date is valid");
-      handleValidDate();
       const age = calculateAge(currentDate, birthDate);
-
       displayAge(age);
     } else {
-      console.log("Invalid date");
       if (!isValidDay) {
         dayInput.addClass("invalid-input");
         $("#day-label").addClass("invalid-label");
@@ -83,10 +79,6 @@ $(document).ready(function () {
 
   function validateYear(year) {
     return !(year < 1900 || year > 2023);
-  }
-
-  function handleValidDate() {
-    $("#calculate-form").off("submit").submit();
   }
   function calculateAge(currentDate, birthDate) {
     let ageYears = currentDate.getFullYear() - birthDate.getFullYear();
