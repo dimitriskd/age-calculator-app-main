@@ -1,50 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="assets/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="assets/app.js" defer></script>
-  <title>Age calculator app</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="assets/app.js" defer></script>
+    <title>Age calculator app</title>
+  </head>
+  <body>
+    <main class="panel">
+      <form action="#" method="get" id="calculate-form">
+        <div class="calculator">
+          <div class="inputs">
+            <div class="input">
+              <label id="day-label" for="day">day</label>
+              <input
+                type="text"
+                class="calc-input"
+                name="day"
+                id="day"
+                placeholder="DD"
+                min="1"
+                max="31"
+                maxlength="2"
+                required
+              />
+              <p class="error-msg">Please insert valid value</p>
+            </div>
+            <div class="input">
+              <label id="month-label" for="month">month</label>
+              <input
+                type="text"
+                class="calc-input"
+                name="month"
+                id="month"
+                placeholder="MM"
+                min="1"
+                max="12"
+                maxlength="2"
+                required
+              />
+              <p class="error-msg">Please insert valid value</p>
+            </div>
+            <div class="input">
+              <label id="year-label" for="year">year</label>
+              <input
+                type="text"
+                class="calc-input"
+                name="year"
+                id="year"
+                placeholder="YYYY"
+                maxlength="4"
+                required
+              />
+              <p class="error-msg">Please insert valid value</p>
+            </div>
+          </div>
+          <div class="calc-btn">
+            <button>
+              <img src="assets/images/icon-arrow.svg" alt="arrow down" />
+            </button>
+          </div>
+        </div>
+      </form>
 
-  <main class="panel">
-    <form action="#" method="get" id="calculate-form" >
-      <div class="calculator">
-        <div class="inputs">
-          <div class="input">
-            <label for="day">day</label>
-            <input type="text" class="calc-input" id="day" placeholder="DD" min="1" max="31" maxlength="2" required>
-          </div>
-          <div class="input">
-            <label for="month">month</label>
-            <input type="text" class="calc-input" id="month" placeholder="MM" min="1" max="12" maxlength="2" required>
-          </div>
-          <div class="input">
-            <label for="year">year</label>
-            <input type="text" class="calc-input" id="year" placeholder="YYYY" min="1920" max="2024" maxlength="4" required>
-          </div>
-        </div>
-        <div class="calc-btn">
-          <button><img src="assets/images/icon-arrow.svg" alt="arrow down"></button>
-        </div>
+      <div class="output-panel">
+        <p><span class="output" id="years-output">--</span>&nbsp;years</p>
+        <p><span class="output" id="months-output">--</span>&nbsp;months</p>
+        <p><span class="output" id="days-output">--</span>&nbsp;days</p>
       </div>
-    </form>
+    </main>
 
-    
-    <div class="output-panel">
-      <p><span class="output" id="years-output">--</span>&nbsp;years</p>
-      <p><span class="output" id="months-output">--</span>&nbsp;months</p>
-      <p><span class="output" id="days-output">--</span>&nbsp;days</p>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
     </div>
-  </main>
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  </body>
 </html>
