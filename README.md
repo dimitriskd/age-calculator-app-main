@@ -33,8 +33,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./age-calc.png)
-![](./age-calc-resp.png)
+
+
+Desktop           |  Mobile
+:-------------------------:|:-------------------------:
+![](./age-calc.png)  |  ![](./age-calc-resp.png)
 
 ### Links
 
