@@ -57,4 +57,4 @@ Desktop           |  Mobile
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/dimitriskd)
+- Frontend Mentor - [@dimitriskd](https://www.frontendmentor.io/profile/dimitriskd)
