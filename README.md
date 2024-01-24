@@ -41,8 +41,8 @@ Desktop           |  Mobile
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/responive-age-calculator-zm1Q7PdL03)
-- Live Site URL: [Add live site URL here](https://dimitriskd.github.io/age-calculator-app-main/)
+- Solution URL: [Solution URL here](https://www.frontendmentor.io/solutions/responive-age-calculator-zm1Q7PdL03)
+- Live Site URL: [Live site URL here](https://dimitriskd.github.io/age-calculator-app-main/)
 
 ## My process
 
